@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>header</title>
+    </head>
+
+    <body>
+               <!--balise nécessaire pour inserer le header dans une autre page-->
+   <header>
+
+    <!--balise nécessaire pour appliquer le css à la page-->
+<link th:href="@{style/app.css}"
+    rel="stylesheet" />
+
+<div class="banniere" >
+    <img style="width : 50% ; margin-left: 50%;" ; th:src="@{/img/moviesermoi.jpg}" alt="bannière">
+</div>
+
+<div th:insert="navbar :: navbar"></div>
+    </body>
+</html>

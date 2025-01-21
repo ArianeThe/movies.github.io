@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Series</title>
+    </head>
+    <body>
+      
+      <div th:insert="header::header"> test </div>
+
+      <!-- un container par article / a optimiser via BdD-->
+       <!-- fleurs sauvages-->
+<div class="containerC">
+    <div class="columnC">
+        <div class="image-container">
+            <img class="affiche" th:src="@{/img/affiches/fleurs-sauvages.jpg}" alt="affiche">
+        </div>
+    </div>
+
+    <div class="columnC">
+        <h3>Les fleurs sauvages</h3>
+        <p>
+            Après un tragique et mystérieux incendie au cours duquel elle perd ses parents, la jeune Alice Hart,
+             alors âgée de neuf ans, part vivre avec sa grand-mère, June, dans une ferme de fleurs. 
+             Elle y apprend que sa famille cache bien des secrets... 
+             D'après le livre éponyme de l'Australienne Holly Ringland.
+        </p>
+    </div>
+    <div class="columnC">
+        <h3>Mon avis</h3>
+        <p>
+            Cette série est prenante et impressionnante ! 
+            Les personnages sont très bien interprétés par des actrices hors pair (on ne présente plus Sigourney Weaver).
+            N'ayant pas lu le livre, je ne peux pas faire la comparaison, mais cette série est entrée dans mon panthéon personnel par la grande porte.
+        </p>
+    </div>
+</div>
+
+<!-- one mississipi-->
+<div class="containerC">
+    <div class="columnC">
+        <div class="image-container">
+            <img class="affiche" th:src="@{/img/affiches/one-mississippi.jpg}" alt="affiche">
+        </div>
+    </div>
+
+    <div class="columnC">
+        <h3>One mississipi</h3>
+    </div>
+
+
+    <div class="columnC">
+        <h3>Mon avis</h3>
+    </div>
+</div>
+    
+
+
+
+
+
+
+        <div th:insert="footer :: footer"></div>
+
+    </body>
+</html>

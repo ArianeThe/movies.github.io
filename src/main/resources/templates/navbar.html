@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NavigationBar</title>
+    
+ <link th:href="@{styles/css/app.css}"
+        rel="stylesheet" />
+</head>
+<body>
+
+
+
+<nav th:fragment="navbar"> 
+
+    <div class="navbar-container">
+  
+        <input type="checkbox" id="toggle"> 
+        <label for="toggle" class="hamburger">☰</label> 
+        
+
+        <div class="menu"> 
+            <a th:href="@{/}" class="menu-item">Accueil</a> 
+            <a th:href="@{/series}" class="menu-item">Séries</a> 
+            <a th:href="@{/horreur}" class="menu-item">Horreur</a> 
+            <a th:href="@{/thriller}" class="menu-item">Thriller</a> 
+            <a th:href="@{/feelGood}" class="menu-item">Feel Good movie</a> 
+        </div> 
+    </div> 
+</div>
+</nav>
+
+</body>
+</html>
