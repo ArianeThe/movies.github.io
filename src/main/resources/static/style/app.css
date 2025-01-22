@@ -37,7 +37,7 @@
    
    .menu-item { 
        list-style: none;
-       flex: 0 0 20%;  
+       flex: 0 0 16%;  
        text-decoration: none;
        display: flex; 
        justify-content: stretch;

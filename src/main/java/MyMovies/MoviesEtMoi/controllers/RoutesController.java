@@ -28,6 +28,10 @@ public class RoutesController {
     @GetMapping("/feelGood") 
     public String feelGood() { 
         return "pages/feelGood";  }
+
+        @GetMapping("/sf") 
+    public String sf() { 
+        return "pages/sf";  }
     
 }
 
