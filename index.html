@@ -19,6 +19,7 @@
     </body>
 </html>-->
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,19 +34,18 @@
     </header>
     <nav>
         <ul>
-            <li><a th:href="@{/}">Accueil</a></li>
-            <li><a th:href="@{/home}">Home</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="/home">Home</a></li>
             <!-- autres liens -->
         </ul>
     </nav>
     <main>
         <h2>HELLO ! Et Bienvenue</h2>
         <p>Toi qui cherche quoi regarder ce soir, entre ici</p>
-        <img th:src="@{/moviesermoi.jpg}" alt="affiche"> <!-- Utilise @{/chemin} pour les ressources statiques -->
-        <button th:onclick="|location.href='@{/home}'|">Aller à la page Home</button> <!-- Correct syntaxe Thymeleaf -->
+        <img src="static/moviesermoi.jpg" alt="affiche"> <!-- Assurez-vous du chemin exact en local-->
+        <button onclick="location.href='/home'">Aller à la page Home</button>
     </main>
     <footer>
         <p>&copy; 2025 Mon Site. Tous droits réservés.</p>
     </footer>
 </body>
-</html>
