@@ -26,7 +26,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil de Mon Site</title>
-    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <header>
@@ -34,11 +34,13 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
             <li><a href="/">Home</a></li>
+            <li><a th:href="@{/}" class="menu-item">Accueil</a> </li>
             <!-- autres liens -->
         </ul>
     </nav>
+
+    <h2> si ça ne marche pas je ne sais pas quoi faire</h2>
     <main>
         <h2>HELLO ! Et Bienvenue</h2>
         <p>Toi qui cherche quoi regarder ce soir, entre ici</p>
