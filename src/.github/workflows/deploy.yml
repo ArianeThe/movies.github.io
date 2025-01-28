@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # ou 'main'
+      - master
 
 jobs:
   build:
@@ -25,10 +25,15 @@ jobs:
     - name: Create publish directory
       run: mkdir -p ./target/classes/templates/pages
 
-    - name: Verify index.html presence
+    - name: Verify target and index.html presence
+      run: |
+        if [ -d ./target ]; then echo "target directory exists"; else echo "target directory does NOT exist"; fi
+        if [ -f index.html ]; then echo "index.html found at root"; else echo "index.html NOT found at root"; fi
+
+    - name: Copy index.html
       run: |
         cp index.html ./target/classes/templates/pages/
-        ls ./target/classes/templates/pages/ # Liste les fichiers pour vérifier que index.html est là
+        if [ -f ./target/classes/templates/pages/index.html ]; then echo "index.html successfully copied"; else echo "index.html copy failed"; fi
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
