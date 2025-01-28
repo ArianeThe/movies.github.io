@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class RoutesController {
         
     @GetMapping("/") 
-    public String index() { 
-        return "pages/index";  }
+    public String home() { 
+        return "pages/home";  }
     
 
     @GetMapping("/series") 
