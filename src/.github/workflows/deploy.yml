@@ -22,8 +22,13 @@ jobs:
     - name: Build Spring Boot Project
       run: mvn clean package
 
-    - name: Copy index.html to publish dir
-      run: mkdir -p ./target/classes/templates/pages && cp index.html ./target/classes/templates/pages/
+    - name: Create publish directory
+      run: mkdir -p ./target/classes/templates/pages
+
+    - name: Verify index.html presence
+      run: |
+        cp index.html ./target/classes/templates/pages/
+        ls ./target/classes/templates/pages/ # Liste les fichiers pour vérifier que index.html est là
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
