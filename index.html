@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
@@ -12,9 +12,40 @@
 
         <img th:src="@{moviesermoi.jpg}" alt="affiche">
 
-        <button onclick="location.href='@{/}'">Aller à la page Home</button>
-        <a href="@{/}">Accueil</a> 
+        <button th:onclick="location.href='@{/}'">Aller à la page Home</button>
+        <a th:href="@{/}">Accueil</a> 
     </div>
    
     </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil de Mon Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur Mon Site</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Accueil</a></li>
+            <li><a th:href="@{/home}">Home</a></li>
+            <!-- autres liens -->
+        </ul>
+    </nav>
+    <main>
+        <h2>HELLO ! Et Bienvenue</h2>
+        <p>Toi qui cherche quoi regarder ce soir, entre ici</p>
+        <img th:src="@{/moviesermoi.jpg}" alt="affiche"> <!-- Utilise @{/chemin} pour les ressources statiques -->
+        <button th:onclick="|location.href='@{/home}'|">Aller à la page Home</button> <!-- Correct syntaxe Thymeleaf -->
+    </main>
+    <footer>
+        <p>&copy; 2025 Mon Site. Tous droits réservés.</p>
+    </footer>
+</body>
 </html>
