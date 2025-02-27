@@ -6,7 +6,7 @@
     </head>
     <body>
       
-      <div th:insert="header::header"> test </div>
+      <div th:replace="~{header::header}"> test </div>
 
       <!-- un container par article / a optimiser via BdD-->
        <!-- fleurs sauvages-->
@@ -70,7 +70,7 @@
 
 
 
-        <div th:insert="footer :: footer"></div>
+        <div th:replace="~{footer::footer}"></div>
 
     </body>
 </html>

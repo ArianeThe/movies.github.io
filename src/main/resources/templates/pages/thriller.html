@@ -6,7 +6,7 @@
     </head>
     <body>
       
-      <div th:insert="header::header"> thriller </div>
+      <div th:replace="~{header::header}"> thriller </div>
 
        <!-- Love lies bleeding-->
        <div class="containerC">
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-        <div th:insert="footer :: footer"></div>
+        <div th:replace="~{footer::footer}"></div>
 
     </body>
 </html>

@@ -6,7 +6,7 @@
     </head>
     <body>
       
-      <div th:insert="header::header"> test </div>
+      <div th:replace="~{header::header}"> test </div>
 
              <!-- Alien Romulus-->
              <div class="containerC">
@@ -61,7 +61,7 @@
             </div>
 
 
-        <div th:insert="footer :: footer"></div>
+        <div th:replace="~{footer::footer}"></div>
 
     </body>
 </html>
