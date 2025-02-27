@@ -4,9 +4,12 @@ services:
     env: docker
     plan: free
     region: frankfurt  # ou choisissez la région la plus proche de vos utilisateurs
-    buildCommand: ./mvnw package -DskipTests
-    startCommand: java -jar target/*.jar
+    buildCommand: |
+      ./mvnw package -DskipTests
+      docker build -t movies-et-moi .
+    startCommand: docker run movies-et-moi
     healthCheckPath: /health
+    autoDeploy: true    # Active le déploiement automatique
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod 
