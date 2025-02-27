@@ -5,9 +5,12 @@ services:
     plan: free
     region: frankfurt  # ou choisissez la région la plus proche de vos utilisateurs
     buildCommand: docker build -t movies-et-moi .
-    startCommand: docker run movies-et-moi
+    startCommand: docker run -p 8080:8080 movies-et-moi
     healthCheckPath: /health
     autoDeploy: true    # Active le déploiement automatique
     envVars:
       - key: SPRING_PROFILES_ACTIVE
-        value: prod 
+        value: prod
+      - key: PORT
+        value: 8080
+    skipBuildCache: true  # Ajouter cette ligne 
