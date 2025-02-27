@@ -1,8 +1,9 @@
 services:
   - type: web
     name: movies-et-moi
-    runtime: java
+    env: docker
     plan: free
+    region: frankfurt  # ou choisissez la région la plus proche de vos utilisateurs
     buildCommand: ./mvnw package -DskipTests
     startCommand: java -jar target/*.jar
     healthCheckPath: /health
