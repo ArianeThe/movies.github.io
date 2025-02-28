@@ -26,32 +26,116 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Style pour la bannière */
+.banniere {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.banniere img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style pour la navbar */
+.navbar-container {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: -4px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 10px;
+}
+
+.menu-item {
+    color: red;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #740606;
+}
+
+/* Cacher le hamburger par défaut */
+#toggle, .hamburger {
+    display: none;
+}
+
+/* Style pour le footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Style pour la présentation sur la page d'accueil */
 .presentation {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    font-size: larger;
 }
 
 /* Media Queries pour le responsive */
 @media screen and (max-width: 768px) {
+    .navbar-container {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #toggle:checked ~ .menu {
+        display: flex;
+    }
+
     .containerC {
         flex-direction: column;
+        align-items: center;
     }
     
     .columnC {
-        min-width: 100%;
+        width: 100%;
+        min-width: auto;
+        max-width: 500px;
     }
     
     .image-container {
         max-width: 200px;
+        margin: 0 auto;
     }
 
-    /* Ajustement pour la bannière */
     .banniere img {
-        width: 100% !important;
-        margin-left: 0 !important;
+        max-width: 90%;
     }
 }
 
@@ -70,4 +154,8 @@
     .presentation {
         padding: 15px;
     }
+}
+
+body {
+    margin: 0;
 } 
