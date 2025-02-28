@@ -1,0 +1,73 @@
+/* Style de base */
+.containerC {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.columnC {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.affiche {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Style pour la présentation sur la page d'accueil */
+.presentation {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Media Queries pour le responsive */
+@media screen and (max-width: 768px) {
+    .containerC {
+        flex-direction: column;
+    }
+    
+    .columnC {
+        min-width: 100%;
+    }
+    
+    .image-container {
+        max-width: 200px;
+    }
+
+    /* Ajustement pour la bannière */
+    .banniere img {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* Amélioration de la lisibilité sur mobile */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .presentation {
+        padding: 15px;
+    }
+} 

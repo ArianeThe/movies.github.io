@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymleaf.org">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>header</title>
     </head>
 
@@ -10,11 +11,11 @@
    <header>
 
     <!--balise nécessaire pour appliquer le css à la page-->
-<link th:href="@{style/app.css}"
+<link th:href="@{/style/css/app.css}"
     rel="stylesheet" />
 
-<div class="banniere" >
-    <img style="width : 50% ; margin-left: 50%;" ; th:src="@{/img/moviesermoi.jpg}" alt="bannière">
+<div class="banniere">
+    <img th:src="@{/img/moviesermoi.jpg}" alt="bannière">
 </div>
 
 <div th:replace="~{navbar :: navbar}"></div>
