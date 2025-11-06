@@ -6,7 +6,8 @@ COPY src ./src
 RUN mvn package -DskipTests
 
 # Image finale pour l'exécution
-FROM openjdk:17-slim
+# FROM openjdk:17-slim
+FROM eclipse-temurin:17-jdk
 
 # Crée un volume temporaire pour stocker les données non persistantes
 # Utile pour les fichiers temporaires de l'application
